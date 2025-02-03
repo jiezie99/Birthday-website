@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Start - Jisung Day!</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #ff6f61;
+            animation: pulse 1.5s infinite;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .game-start {
+            font-size: 30px;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            animation: blink 1s steps(5, start) infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .message {
+            font-size: 20px;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .pixel {
+            font-size: 30px;
+            color: #ffcc00;
+            margin-top: 30px;
+        }
+
+        .message img {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+        }
+
+        .start-button {
+            font-size: 25px;
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            animation: pulse 1.5s infinite;
+        }
+
+        .start-button:hover {
+            background-color: #ff9f6b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Start</h1>
+    <p class="game-start">Press Start to Begin</p>
+
+    <button class="start-button" onclick="startGame()">Start Game</button>
+
+    <div id="gameContent" style="display:none;">
+        <h1>Happy Birthday!</h1>
+        <p class="message">
+            "안녕 지성이, 잘 지냈어요? 너 나이가 한 살 더 먹었네, 시간이 이렇게 빨리 지나가다니 [◉◉] <br>
+            너는 정말 특별하고, 오늘도 그 특별한 날에 더 특별해졌어. 나이가 늘어나는 것만큼, 더 멋져지고, 시즈니와 나 같은 사람은 너에게 더 반할 거야."
+        </p>
+        <p class="message">We hope you have a fun day filled with 픽셀의 기쁨</p>
+
+        <div class="pixel">
+            <span>🎮</span> <span>💻</span> <span>🕹️</span>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            document.querySelector('.game-start').style.display = 'none';
+            document.querySelector('.start-button').style.display = 'none';
+            document.getElementById('gameContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
